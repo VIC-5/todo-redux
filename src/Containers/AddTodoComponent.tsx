@@ -7,7 +7,7 @@ type AddTodoComponentsProps = {
 };
 
 const AddTodoComponents = ({ dispatch } : AddTodoComponentsProps) => {
-    let input : any;
+    let input : HTMLInputElement;
 
     return (
         <div>
@@ -21,7 +21,7 @@ const AddTodoComponents = ({ dispatch } : AddTodoComponentsProps) => {
                     input.value = '';
                 }}
             >
-                <input ref={node => (input = node)} />
+                <input ref={(node : HTMLInputElement) => (input = node)} />
                 <button type='submit'>Add Todo</button>
             </form>
         </div>
